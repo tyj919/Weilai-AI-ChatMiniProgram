@@ -1,0 +1,19 @@
+<view class="wrap">
+  <view class="top-bar">蔚来智能客服</view>
+  <scroll-view class="chat-wrap" scroll-y>
+    <block wx:for="{{chatList}}" wx:key="index">
+      <view wx:if="{{item.type===0}}" class="msg-left">
+        <image src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/robot.png" class="avatar"></image>
+        <view class="bubble left-bubble">{{item.content}}</view>
+      </view>
+      <view wx:if="{{item.type===1}}" class="msg-right">
+        <view class="bubble right-bubble">{{item.content}}</view>
+        <image src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/user.png" class="avatar"></image>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="input-area">
+    <input class="ipt" bindinput="getInput" value="{{msg}}" placeholder="输入车型问题" />
+    <button bindtap="sendMsg" class="send-btn">发送</button>
+  </view>
+</view>

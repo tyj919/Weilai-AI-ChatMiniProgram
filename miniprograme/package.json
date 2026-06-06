@@ -1,0 +1,8 @@
+{
+  "name": "weilai-ai-chat-miniprogram",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.12.2"
+  }
+}
